@@ -75,6 +75,10 @@ Fanuc LS Generator
 LS Parser / Visualizer / Offset Editor
 ```
 
+![WAAM Slicer Workflow](images/framework.jpg)
+
+**Figure.** End-to-end workflow from STL geometry to physical WAAM deposition.
+
 ### Project Modules
 
 | File | Responsibility |
@@ -157,6 +161,17 @@ The generated LS file can then be loaded back into the project for inspection.
 This provides an inspection stage between LS generation and robot-side execution.
 
 ---
+
+## Physical Demonstration
+
+The slicer has been used to generate deposition paths and Fanuc R-30iB LS programs for physical WAAM deposition. The examples below show selected geometries from the STL input through generated slicing results to the resulting deposited parts. These examples demonstrate the end-to-end workflow from geometric slicing and path planning to robot-code generation and physical deposition.
+
+| Generated Slices | Physical Deposit |
+|---|---|
+| ![Part 1 slices](images/impeller_slice.jpg) | ![Part 1 deposit](images/impeller.jpg) |
+| ![Part 2 slices](images/gear_rotor_slice.jpg) | ![Part 2 deposit](images/gear_rotor.jpg) |
+| ![Part 3 slices](images/CD_Nozzle_slice.jpg) | ![Part 3 deposit](images/CD_nozzle.jpg) |
+
 
 ## Installation
 
@@ -262,6 +277,7 @@ The project can produce:
 - Fanuc R-30iB `.LS` programs
 - LS motion visualizations
 - Coordinate-offset versions of LS programs
+- Physical WAAM deposition examples
 
 Generated `.LS` and `.json` files are excluded from version control by `.gitignore`.
 
